@@ -20,30 +20,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "record", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("a"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("192.168.1.1"),
-//				},
-//				RecordType: pulumi.String("1"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "record", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("a"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("192.168.1.1"),
+// 			},
+// 			RecordType: pulumi.String("1"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type NS (2)
 //
@@ -51,31 +48,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "ns", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("example.com."),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("ns11.sample.com."),
-//					pulumi.String("ns12.sample.com."),
-//				},
-//				RecordType: pulumi.String("NS"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "ns", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("example.com."),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("ns11.sample.com."),
+// 				pulumi.String("ns12.sample.com."),
+// 			},
+// 			RecordType: pulumi.String("NS"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type CNAME (5)
 //
@@ -83,30 +77,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "cname", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("cname"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("host.sample.com."),
-//				},
-//				RecordType: pulumi.String("CNAME"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "cname", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("cname"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("host.sample.com."),
+// 			},
+// 			RecordType: pulumi.String("CNAME"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type PTR (12)
 //
@@ -114,30 +105,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "ptr", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("1"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("ns1.example.com."),
-//				},
-//				RecordType: pulumi.String("12"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("70.154.156.in-addr.arpa."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "ptr", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("1"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("ns1.example.com."),
+// 			},
+// 			RecordType: pulumi.String("12"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("70.154.156.in-addr.arpa."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type MX (15)
 //
@@ -145,30 +133,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "mx", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("mx"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("2 example.com."),
-//				},
-//				RecordType: pulumi.String("15"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "mx", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("mx"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("2 example.com."),
+// 			},
+// 			RecordType: pulumi.String("15"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type TXT (16)
 //
@@ -176,30 +161,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "txt", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("txt"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("text data"),
-//				},
-//				RecordType: pulumi.String("TXT"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "txt", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("txt"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("text data"),
+// 			},
+// 			RecordType: pulumi.String("TXT"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type AAAA (28)
 //
@@ -207,30 +189,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "aaaa", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("aaaa"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("2001:db8:85a3:0:0:8a2e:370:7334"),
-//				},
-//				RecordType: pulumi.String("AAAA"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "aaaa", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("aaaa"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("2001:db8:85a3:0:0:8a2e:370:7334"),
+// 			},
+// 			RecordType: pulumi.String("AAAA"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type SRV (33)
 //
@@ -238,30 +217,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "srv", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("srv"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("5 6 7 example.com."),
-//				},
-//				RecordType: pulumi.String("33"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "srv", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("srv"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("5 6 7 example.com."),
+// 			},
+// 			RecordType: pulumi.String("33"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type SSHFP (44)
 //
@@ -269,30 +245,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "sshfp", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("sshfp"),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("1 2 54B5E539EAF593AEA410F80737530B71CCDE8B6C3D241184A1372E98BC7EDB37"),
-//				},
-//				RecordType: pulumi.String("SSHFP"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "sshfp", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("sshfp"),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("1 2 54B5E539EAF593AEA410F80737530B71CCDE8B6C3D241184A1372E98BC7EDB37"),
+// 			},
+// 			RecordType: pulumi.String("SSHFP"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create DNS record of type APEXALIAS (65282)
 //
@@ -300,30 +273,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/mark-bixler/pulumi-ultradns/sdk/go/ultradns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ultradns.NewRecord(ctx, "apex", &ultradns.RecordArgs{
-//				OwnerName: pulumi.String("example.com."),
-//				RecordDatas: pulumi.StringArray{
-//					pulumi.String("sample.com."),
-//				},
-//				RecordType: pulumi.String("APEXALIAS"),
-//				Ttl:        pulumi.Int(120),
-//				ZoneName:   pulumi.String("example.com."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ultradns.NewRecord(ctx, "apex", &ultradns.RecordArgs{
+// 			OwnerName: pulumi.String("example.com."),
+// 			RecordDatas: pulumi.StringArray{
+// 				pulumi.String("sample.com."),
+// 			},
+// 			RecordType: pulumi.String("APEXALIAS"),
+// 			Ttl:        pulumi.Int(120),
+// 			ZoneName:   pulumi.String("example.com."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -331,9 +301,7 @@ import (
 // Records can be imported by combining their `owner_name`, `zone_name`, and `record_type`, separated by a colon.<br/> Example `www.example.com.:example.com.:A (1)`. -> For import, the `owner_name` and `zone_name` must be a FQDN, and `record_type` should have the type as well as the corresponding number as shown in the example below. Example
 //
 // ```sh
-//
-//	$ pulumi import ultradns:index/record:Record example "www.example.com.:example.com.:A (1)"
-//
+//  $ pulumi import ultradns:index/record:Record example "www.example.com.:example.com.:A (1)"
 // ```
 type Record struct {
 	pulumi.CustomResourceState
@@ -539,7 +507,7 @@ func (i *Record) ToRecordOutputWithContext(ctx context.Context) RecordOutput {
 // RecordArrayInput is an input type that accepts RecordArray and RecordArrayOutput values.
 // You can construct a concrete instance of `RecordArrayInput` via:
 //
-//	RecordArray{ RecordArgs{...} }
+//          RecordArray{ RecordArgs{...} }
 type RecordArrayInput interface {
 	pulumi.Input
 
@@ -564,7 +532,7 @@ func (i RecordArray) ToRecordArrayOutputWithContext(ctx context.Context) RecordA
 // RecordMapInput is an input type that accepts RecordMap and RecordMapOutput values.
 // You can construct a concrete instance of `RecordMapInput` via:
 //
-//	RecordMap{ "key": RecordArgs{...} }
+//          RecordMap{ "key": RecordArgs{...} }
 type RecordMapInput interface {
 	pulumi.Input
 

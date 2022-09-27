@@ -48,7 +48,7 @@ setup(name='mark-bixler_ultradns',
       keywords='pulumi ultradns category/cloud',
       url='https://www.pulumi.com',
       project_urls={
-          'Repository': 'https://github.com/pulumi/pulumi-ultradns'
+          'Repository': 'https://github.com/mark-bixler/pulumi-ultradns'
       },
       license='Apache-2.0',
       packages=find_packages(),
