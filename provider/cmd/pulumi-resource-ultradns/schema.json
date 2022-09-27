@@ -10,7 +10,7 @@
     "homepage": "https://www.pulumi.com",
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`ultradns` Terraform Provider](https://github.com/ultradns/terraform-provider-ultradns).",
-    "repository": "https://github.com/pulumi/pulumi-ultradns",
+    "repository": "https://github.com/mark-bixler/pulumi-ultradns",
     "pluginDownloadURL": "https://github.com/org/mark-bixler/pulumi-ultradns/releases/download/v${VERSION}",
     "publisher": "mark-bixler",
     "meta": {
@@ -42,13 +42,13 @@
             "disableUnionOutputTypes": true,
             "packageDescription": "A Pulumi package for creating and managing ultradns cloud resources.",
             "packageName": "@mark-bixler/ultradns",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/ultradns/terraform-provider-ultradns)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-ultradns` repo](https://github.com/pulumi/pulumi-ultradns/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-ultradns` repo](https://github.com/ultradns/terraform-provider-ultradns/issues).",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/ultradns/terraform-provider-ultradns)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-ultradns` repo](https://github.com/mark-bixler/pulumi-ultradns/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-ultradns` repo](https://github.com/ultradns/terraform-provider-ultradns/issues).",
             "typescriptVersion": ""
         },
         "python": {
             "compatibility": "tfbridge20",
             "packageName": "mark-bixler_ultradns",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/ultradns/terraform-provider-ultradns)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-ultradns` repo](https://github.com/pulumi/pulumi-ultradns/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-ultradns` repo](https://github.com/ultradns/terraform-provider-ultradns/issues).",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/ultradns/terraform-provider-ultradns)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-ultradns` repo](https://github.com/mark-bixler/pulumi-ultradns/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-ultradns` repo](https://github.com/ultradns/terraform-provider-ultradns/issues).",
             "requires": {
                 "pulumi": "\u003e=3.0.0,\u003c4.0.0"
             }
