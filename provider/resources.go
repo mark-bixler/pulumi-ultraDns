@@ -81,12 +81,23 @@ func Provider() tfbridge.ProviderInfo {
 		PreConfigureCallback: preConfigureCallback,
 		Resources:            map[string]*tfbridge.ResourceInfo{
 			"ultradns_record": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "Record"),},
-			
+			"ultradns_dirpool": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "DirPool"),},
+			"ultradns_rdpool": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "RdPool"),},
+			"ultradns_sbpool": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "SbPool"),},
+			"ultradns_sfpool": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "SfPool"),},
+			"ultradns_slbpool": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "SlbPool"),},
+			"ultradns_tcpool": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "TcPool"),},
+			"ultradns_zone": {Tok: tfbridge.MakeResource(mainPkg, mainMod, "Zone"),},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
-			// Map each resource in the Terraform provider to a Pulumi function. An example
-			// is below.
-			// "aws_ami": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getAmi")},
+			"ultradns_record": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getRecord"),},
+			"ultradns_dirpool": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getDirPool"),},
+			"ultradns_rdpool": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getRdPool"),},
+			"ultradns_sbpool": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSbPool"),},
+			"ultradns_sfpool": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSfPool"),},
+			"ultradns_slbpool": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getSlbPool"),},
+			"ultradns_tcpool": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getTcPool"),},
+			"ultradns_zone": {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getZone"),},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@mark-bixler/ultradns",
