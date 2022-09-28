@@ -92,6 +92,5 @@ jobs:
           - 1.18.x
         language:
           - nodejs
-          - go
         nodeversion:
           - 14.x
