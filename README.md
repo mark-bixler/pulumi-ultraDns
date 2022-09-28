@@ -22,7 +22,7 @@ We showcase a Pulumi-owned provider based on an upstream provider named `terrafo
 Ensure the following tools are installed and present in your `$PATH`:
 
 * [`pulumictl`](https://github.com/pulumi/pulumictl#installation)
-* [Go 1.17](https://golang.org/dl/) or 1.latest
+* [Go 1.18](https://golang.org/dl/) or 1.latest
 * [NodeJS](https://nodejs.org/en/) 14.x.  We recommend using [nvm](https://github.com/nvm-sh/nvm) to manage NodeJS installations.
 * [Yarn](https://yarnpkg.com/)
 * [TypeScript](https://www.typescriptlang.org/)
